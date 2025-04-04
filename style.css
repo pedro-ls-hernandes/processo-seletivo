@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #1BD6DD;
+    background: radial-gradient(at center bottom, #1BD6DD, #DFFEFF);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-variation-settings: 'wdth' 100;
+}
+
+.container {
+    max-width: 600px;
+    height: 640px;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 3.3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    text-align: center;
+    top: 5rem;
+}
+
+.heading h1 {
+    font-size: 2.5rem;
+    font-weight: 350;
+    color: #2D94DF;
+}
+
+.formulario {
+    position: relative;
+    margin: 0 auto;
+    height: 80%;
+    width: 70%;
+    padding: 3rem;
+    top: 5%;
+}
+
+.input-form {
+    position: relative;
+    height: 37px;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.input-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    font-size: .9rem;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #2D94DF;
+    transition: 0.3s;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: .9rem;
+    font-weight: 200;
+    color: #2D94DF;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-field.active {
+    border-bottom: 2px solid #48E3F5;
+}
+
+.input-field.active + label{
+    font-size: 0.7rem;
+    top: -2px;
+}
+
+.submit-btn {
+    display: inline-block;
+    width: 100%;
+    height: 43px;
+    border-radius: 1rem;
+    background: linear-gradient(0deg, #2D94DF, #48E3F5);
+    color: #fff;
+    font-size:1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #fff;
+    border: #48E3F5 2px solid;
+    color: #48E3F5;
+    transition: 0.3s;
+}
+
+@media (max-width: 850px) {
+    .container {
+        height: auto;
+        max-width: 550px;
+        overflow: hidden;
+    }
+
+    form {
+        position: static;
+        transform: none;
+        width: revert;
+        height: revert;
+    }
+
+    .heading {
+        width: 100%;
+        height: 20%;
+        position: relative;
+        text-align: center;
+        top: 1rem;
+    }
+
+    .heading h1 {
+        font-size: 1.8rem;
+    } 
+}
+
